@@ -11,12 +11,7 @@ PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d /tmp/_build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) . 
 
 
-clean:
-	rm -rf build/*
-	rm -f doc/*.pyc
-	rm -rf doc/_tmp
-
-all: clean
+build: clean
 	#build developer documentation and place it in usr/share/doc/persy
 	mkdir -p doc/_tmp
 	echo $(VERSION) > doc/_tmp/VERSION
@@ -29,4 +24,9 @@ all: clean
 	@echo "Build finished. The HTML pages are in usr/share/doc"
 
 	@echo "building..."
+
+clean:
+	rm -rf build/*
+	rm -f doc/*.pyc
+	rm -rf doc/_tmp
 

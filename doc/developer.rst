@@ -42,9 +42,8 @@ For some actions in the Makefile you also need:
 Writing Documentation
 --------------------------
 
-The documentation is part of the main persy package in the '/doc' directory. It consists of some files written in REST_-Markup and is rendered to an HTML version with Sphinx_. 
+The documentation is split into several independent packages depending on the language it is written in(persy-doc-fr, persy-doc-en). It consists of some files written in REST_-Markup and is rendered to an HTML version with Sphinx_. 
 
-The main documentation and project language is english. The files are structured accordingly: index.rst is the main documentation file and written english. Documentation and files in other languages append a suffix to the corresponding name of the english file. index_fr.rst is the french version of the main documentation file. 
 
 
 Building a new HTML Documentation
@@ -53,14 +52,14 @@ __________________________________
 .. note::
    Sphinx must be installed for this action. On Ubuntu, it is part of the python-sphinx package.
 
-First, you have to change in the project root of the main persy package. This is should be the parent directory of "/doc".  You can run 
+First, you have to change in the project root of the documentation This is should be the parent directory of "/doc".  You can run 
 
 .. code-block:: bash
   :linenos:
 
-   VERSION="x.x.x" make doc-html
+   make
 
-This will render the documentation found in /doc and place the result in /build/persy_x.x.x/usr/share/doc/persy/. You can use your favorite browser to view the result. 
+This will render the documentation found in /doc and place the result in /build. You can use your favorite browser to view the result. 
 
 
 
